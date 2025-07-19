@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하은이 한뼘 놀이책</title>
+    <style>
+        body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .text{
+    /*writing-mode: vertical-lr;*/
+    display: flex;
+   
+    font-size: 13pt;
+    background-image: url(./data/span_hauni_height890-width600.png);
+    width: 600px;
+    height: 900px;
+    background-repeat: no-repeat;
+
+        }
+
+        #main_span {
+    width: 600px;
+    height: 900px;
+    background-image: url("./data/span_narrow_only_hand.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    position: relative; /* ✅ 이것이 핵심 */
+}
+
+       .span1 {
+            width: 220px;
+            height: 300px;
+            position: absolute;
+            top: 55%;
+            left: 20%;
+            overflow: auto; /* 이미지가 넘치면 스크롤 생기도록 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+            }
+
+            .span img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+            }
+
+            .span1:hover{
+            filter: drop-shadow();
+            filter: drop-shadow(0 0 2rem rgb(0, 255, 42));
+            }
+
+            .span2{
+                
+            width: 220px;
+            height: 300px;
+           margin-top: 70%;
+            overflow: auto; /* 이미지가 넘치면 스크롤 생기도록 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+            }
+            
+
+    </style>
+</head>
+<body>
+    <div class="text">하은이의 한뼘은 얼마일까?
+          <div class="span2">
+           <br><br><br><br><br>
+           <br><br>
+            한뼘으로 잴 수있는 것들을
+생각해보았다<br><br>
+나하은의 한 뼘은 오른손을 기준으로 했는데
+이유는 오른손잡이이기 때문입니다.
+그래서인지 오른손은 왼손보다 조금 더 
+단단하고
+두껍고
+강하다
+?
+한 뼘으로 잴 수있는 것은 아래와 같습니다:
+하늘 구름의 백만분의 1
+무지개(어쩌면 전부)
+강아지 꼬리
+아이폰 5s
+마샬 블루투스 스피커 00모델
+1.5리터 생수통의 절반 정도
+5센트 동전13개
+계란 두개반 (계란이 작다면 세개도 가능하다) 
+
+          </div>
+    </div>
+    <div id="main_span">
+        클릭!
+       <div class="span1">
+  <a id="overlay-link" href="#" target="_blank">
+    <img id="overlay-img" src="" alt="슬라이드 이미지">
+  </a>
+</div>
+    </div>
+     <script src="playbook.js"></script>
+</body>
+</html>
